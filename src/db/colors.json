@@ -1,26 +1,35 @@
 [
 	{
-		"value": "rgb(115, 168, 87)"
+		"value": "#27ae60"
 	},
 	{
-		"value": "rgb(39, 174, 96)"
+		"value": "#2c3e50"
 	},
 	{
-		"value": "rgb(231, 76, 60)"
+		"value": "#f39c12"
 	},
 	{
-		"value": "rgb(22, 160, 133)"
+		"value": "#e74c3c"
 	},
 	{
-		"value": "rgb(251, 105, 100)"
+		"value": "#9b59b6"
 	},
 	{
-		"value": "rgb(119, 177, 169)"
+		"value": "#FB6964"
 	},
 	{
-		"value": "rgb(52, 34, 36)"
+		"value": "#342224"
 	},
 	{
-		"value": "rgb(155, 89, 182)"
+		"value": "#472E32"
+	},
+	{
+		"value": "#BDBB99"
+	},
+	{
+		"value": "#77B1A9"
+	},
+	{
+		"value": "#73A857"
 	}
 ]

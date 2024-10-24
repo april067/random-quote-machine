@@ -1,40 +1,38 @@
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
 
-const quotes = require('../db/quotes.json');
-const colors = require('../db/colors.json');
+// const quotes = require('../db/quotes.json');
+// const colors = require('../db/colors.json');
 
-const NEW_QUOTE = 'NEW_QUOTE';
+// const NEW_QUOTE = 'NEW_QUOTE';
 
-const mapStateToProps = (state) => {
-	return { data: state };
-};
+// const mapStateToProps = (state) => {
+// 	return { data: state };
+// };
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		send: () => {
-			dispatch(sendRequest());
-		},
-		// generateItems,
-	};
-};
+// const mapDispatchToProps = (dispatch) => {
+// 	return {
+// 		send: () => {
+// 			dispatch(sendRequest());
+// 		},
+// 	};
+// };
 
-const sendRequest = () => ({
-	type: NEW_QUOTE,
-});
+// const sendRequest = () => ({
+// 	type: NEW_QUOTE,
+// });
 
-const reducer = (state = { quotes, colors }, action) => {
-	// console.table(state);
-	// console.log(action.quoteItem);
+// // const reducer = (state = { quotes, colors }, action) => {
+// // 	switch (action.type) {
+// // 		case NEW_QUOTE:
+// // 			return { ...state };
 
-	switch (action.type) {
-		case NEW_QUOTE:
-			return { ...state };
+// // 		default:
+// // 			return state;
+// // 	}
+// // };
 
-		default:
-			return state;
-	}
-};
+// const reducer = (state = { quotes, colors }, action) => ({ ...state });
 
-const store = createStore(reducer);
+// const store = createStore(reducer);
 
-export { store, mapStateToProps, mapDispatchToProps };
+// export { store, mapStateToProps, mapDispatchToProps };
