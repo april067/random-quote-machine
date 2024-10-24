@@ -13,6 +13,14 @@ class Quote extends Component {
 		return (
 			<div className={styles.quote}>
 				<h1>Remember that not getting what you want is sometimes a wonderful stroke of luck</h1>
+				<p>-Dalai Lama</p>
+				<ul>
+					<li>
+						<button>Twitter</button>
+						<button>Instagram</button>
+						<button>New quote</button>
+					</li>
+				</ul>
 			</div>
 		);
 	}

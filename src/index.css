@@ -18,3 +18,7 @@ p {
 	font-weight: unset;
 	font-size: unset;
 }
+
+ul {
+	list-style: none;
+}
