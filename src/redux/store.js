@@ -6,36 +6,29 @@ const colors = require('../db/colors.json');
 const NEW_QUOTE = 'NEW_QUOTE';
 
 const mapStateToProps = (state) => {
-	return [state.quotes[quoteItem], state.colors[colorItem]];
+	return { data: state };
 };
+
 const mapDispatchToProps = (dispatch) => {
 	return {
-		submitNewMessage: (request) => {
-			dispatch(sendRequest(request));
+		send: () => {
+			dispatch(sendRequest());
 		},
+		// generateItems,
 	};
 };
 
-const quoteItem = Math.floor(Math.random() * 102);
-const colorItem = Math.floor(Math.random() * 9);
-// const request = { quoteItem, colorItem };
-
-const sendRequest = ({ quoteItem, colorItem }) => ({
+const sendRequest = () => ({
 	type: NEW_QUOTE,
-	quoteItem,
-	colorItem,
 });
 
 const reducer = (state = { quotes, colors }, action) => {
+	// console.table(state);
+	// console.log(action.quoteItem);
+
 	switch (action.type) {
 		case NEW_QUOTE:
-			const { text, author } = state.quotes[action.quoteItem];
-			const { value } = state.colors[action.colorItem];
-
-			return {
-				quote: { text, author },
-				color: value,
-			};
+			return { ...state };
 
 		default:
 			return state;
@@ -43,7 +36,5 @@ const reducer = (state = { quotes, colors }, action) => {
 };
 
 const store = createStore(reducer);
-
-console.log(store.getState());
 
 export { store, mapStateToProps, mapDispatchToProps };

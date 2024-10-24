@@ -3,22 +3,30 @@ import { Component } from 'react';
 import styles from './Quote.module.css';
 
 class Quote extends Component {
-	// constructor(props) {
-	// 	super(props);
+	constructor(props) {
+		super(props);
 
-	// 	state: [];
-	// }
+		this.requestNewQuote = this.requestNewQuote.bind(this);
+	}
+
+	requestNewQuote(quoteItem, colorItem) {
+		return this.props.send(quoteItem, colorItem);
+	}
 
 	render() {
+		const { quotes, colors } = this.props.data;
+		const quoteItem = Math.floor(Math.random() * 102);
+		const colorItem = Math.floor(Math.random() * 8);
+
 		return (
-			<div className={styles.quote}>
-				<h1>Remember that not getting what you want is sometimes a wonderful stroke of luck</h1>
-				<p>-Dalai Lama</p>
+			<div className={styles.quote} style={{ backgroundColor: colors[colorItem].value }}>
+				<h1>{quotes[quoteItem].text}</h1>
+				<p>-{quotes[quoteItem].author}</p>
 				<ul>
 					<li>
 						<button>Twitter</button>
 						<button>Instagram</button>
-						<button>New quote</button>
+						<button onClick={() => this.requestNewQuote(quoteItem, colorItem)}>New quote</button>
 					</li>
 				</ul>
 			</div>
