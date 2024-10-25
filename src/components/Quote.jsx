@@ -23,16 +23,49 @@ class Quote extends Component {
 		const colorItem = Math.floor(Math.random() * colors.length);
 
 		return (
-			<div className={styles.quote} style={{ backgroundColor: colors[colorItem] }}>
-				<h1>{quotes[quoteItem].text}</h1>
-				<p>-{quotes[quoteItem].author}</p>
-				<ul>
-					<li>
-						<button>Twitter</button>
-						<button>Instagram</button>
-						<button onClick={this.requestNewQuote}>New quote</button>
-					</li>
-				</ul>
+			<div
+				className={styles.quote}
+				style={{ backgroundColor: colors[colorItem], color: colors[colorItem] }}
+			>
+				<div id="quote-box" className={styles.wrap}>
+					<h1 id="text" className={styles.text}>
+						<i className="fas fa-quote-left"></i>
+						<i> </i>
+						{quotes[quoteItem].text}
+					</h1>
+					<p id="author" className={styles.author}>
+						-{quotes[quoteItem].author}
+					</p>
+					<div className={styles.cover}>
+						<ul>
+							<li>
+								<a
+									id="tweet-quote"
+									href="twitter.com/intent/tweet"
+									target="_top"
+									className={styles.link}
+									style={{ backgroundColor: colors[colorItem] }}
+								>
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="/" className={styles.link} style={{ backgroundColor: colors[colorItem] }}>
+									<i className="fab fa-facebook-f"></i>
+								</a>
+							</li>
+						</ul>
+
+						<button
+							id="new-quote"
+							className={styles.button}
+							style={{ backgroundColor: colors[colorItem] }}
+							onClick={this.requestNewQuote}
+						>
+							New quote
+						</button>
+					</div>
+				</div>
 			</div>
 		);
 	}
