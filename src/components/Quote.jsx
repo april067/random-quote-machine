@@ -41,8 +41,9 @@ class Quote extends Component {
 							<li>
 								<a
 									id="tweet-quote"
-									href="twitter.com/intent/tweet"
-									target="_top"
+									href="https://www.twitter.com"
+									target="_blank"
+									rel="noopener noreferrer"
 									className={styles.link}
 									style={{ backgroundColor: colors[colorItem] }}
 								>
@@ -50,7 +51,13 @@ class Quote extends Component {
 								</a>
 							</li>
 							<li>
-								<a href="/" className={styles.link} style={{ backgroundColor: colors[colorItem] }}>
+								<a
+									href="https://www.facebook.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className={styles.link}
+									style={{ backgroundColor: colors[colorItem] }}
+								>
 									<i className="fab fa-facebook-f"></i>
 								</a>
 							</li>
